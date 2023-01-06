@@ -30,6 +30,14 @@ if 'Intel Core 13' in windows:
 if 'Apple MacBook' in macbook:
     print('but still macs are the best so it beats windows lmaoo')
     
-# for apple in macbook or windows:
-#     if apple in macbook or windows:
-#         print('it is apple anywas... go get rich already! :D')
+
+class Linux(Computer):
+    def __init__(self, characteristics):
+        super().__init__(characteristics)
+    
+    def make_sound(self):
+        return print('Khht.. skkhh.. boom-beep...')
+    
+
+linux = Linux(['Lenovo Thinkpad', 'X1 Carbon', 'Intel Core i7', 'black'])
+linux.make_sound()
