@@ -28,5 +28,23 @@ class Arconians(Human):
 
 pogo = Arconians('Pogo', 'Zoic', 'Emperor')
 pogo.show()
+
+class Babies(Human):
+    def __init__(self, name, last_name, height, weight, eye_size):
+        super().__init__(name, last_name)
+        self.height = height
+        self.weight = weight
+        self.eye_size = eye_size
     
+    def cry(self):
+        if self.eye_size == 'Big':
+            return 'damn, so much tears'
+        elif self.eye_size == 'Medium':
+            return 'gosh... stop crying!'
+        else:
+            return 'so little tearssss :D'
+    
+
+alex = Babies('Alex', 'O\'Brien', 60, 6, 'Big')
+print(alex.cry())
         
